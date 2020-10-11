@@ -21,3 +21,5 @@ jobs:
         run: npm run build
       - name: Run test
         run: npm run start
+        env:
+          EXECUTABLE_PATH: /usr/bin/google-chrome-stable
