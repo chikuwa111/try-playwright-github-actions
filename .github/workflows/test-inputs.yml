@@ -1,4 +1,4 @@
-name: Test environment variables
+name: Test workflow_dispatch inputs
 
 on:
   workflow_dispatch:
