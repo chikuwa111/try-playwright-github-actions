@@ -1,0 +1,22 @@
+name: Test timezone
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: No TZ
+        run: date
+      - name: With TZ
+        run: date
+        env:
+          TZ: Asia/Tokyo
+      - name: No TZ with date option
+        run: date --date '-6 day'
+      - name: With TZ and date option
+        run: date --date '-6 day'
+        env:
+          TZ: Asia/Tokyo
